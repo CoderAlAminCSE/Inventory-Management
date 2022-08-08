@@ -4,6 +4,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Backend\CategoryController;
 use App\Http\Controllers\Backend\CustomerController;
 use App\Http\Controllers\Backend\DefaultController;
+use App\Http\Controllers\Backend\InvoiceController;
 use App\Http\Controllers\Backend\ProductController;
 use App\Http\Controllers\Backend\ProfileController;
 use App\Http\Controllers\Backend\PurchaseController;
@@ -128,7 +129,22 @@ Route::prefix('purchase')->group(function(){
 });
 
 
+//Default controller related route
+    Route::get('/get-category',[DefaultController::class,'getCategory'])->name('get-category');
+    Route::get('/get-product',[DefaultController::class,'getProduct'])->name('get-product');
+    Route::get('/get-stoke',[DefaultController::class,'getStoke'])->name('get-product-stoke');
 
-Route::get('/get-category',[DefaultController::class,'getCategory'])->name('get-category');
-Route::get('/get-product',[DefaultController::class,'getProduct'])->name('get-product');
+    
+// Manage Invoice related all route
+Route::prefix('invoice')->group(function(){
+    Route::get('/view',[InvoiceController::class,'View'])->name('invoice.view');
+    Route::get('/add',[InvoiceController::class,'Add'])->name('invoice.add');
+    Route::post('/store',[InvoiceController::class,'Store'])->name('invoice.store');
+    Route::get('/pending',[InvoiceController::class,'pendingList'])->name('invoice.pending.list');
+    Route::get('/approve/{id}',[InvoiceController::class,'Approve'])->name('invoice.approve');
+    Route::get('/delete/{id}',[InvoiceController::class,'Delete'])->name('invoice.delete');
+    Route::post('/invoice/approve/{id}',[InvoiceController::class,'ApproveStore'])->name('invoice.approve.store');
+    Route::get('/print/list',[InvoiceController::class,'PrintInvoiceList'])->name('invoice.print.list');
+    Route::get('/print/{id}',[InvoiceController::class,'PrintInvoice'])->name('invoice.print');
+});
 

@@ -143,11 +143,11 @@
     <input type="hidden" name="purchase_no[]" value="@{{purchase_no}}">
     <input type="hidden" name="supplier_id[]" value="@{{supplier_id}}">
     <td>
-      <input type="hidden" name="category_id[]" value="@{{category_id}}">@{{category_id}}
+      <input type="hidden" name="category_id[]" value="@{{category_id}}">@{{category_name}}
     </td>
 
     <td>
-      <input type="hidden" name="product_id[]" value="@{{product_id}}">@{{product_id}}
+      <input type="hidden" name="product_id[]" value="@{{product_id}}">@{{product_name}}
     </td>
 
     <td>

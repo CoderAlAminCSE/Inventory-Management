@@ -22,4 +22,12 @@ class DefaultController extends Controller
         //  dd($allProduct);
          return response()->json($allProduct);
     }
+
+
+    public function getStoke(Request $request){
+        $product_id = $request->product_id;
+        $stoke = Product::where('id',$product_id)->first()->quantity;
+        // dd($stoke);
+        return response()->json($stoke);
+    }
 }

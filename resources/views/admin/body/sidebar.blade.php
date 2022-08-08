@@ -136,6 +136,27 @@
             <li><a href="{{route('purchase.pending.list')}}"><i class="ti-more"></i>Approval Purchase</a></li>
           </ul>
         </li>	
+
+
+         <li class="treeview {{($prefix == '/invoice')?'active':''}}">
+          <a href="#">
+            <i data-feather="mail"></i> <span>Manage Invoice</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-right pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="{{route('invoice.view')}}"><i class="ti-more"></i>View Invoice</a></li>
+          </ul>
+          <ul class="treeview-menu">
+            <li><a href="{{route('invoice.pending.list')}}"><i class="ti-more"></i>Approval Invoice</a></li>
+          </ul>
+          <ul class="treeview-menu">
+            <li><a href="{{route('invoice.print.list')}}"><i class="ti-more"></i>Print Invoice</a></li>
+          </ul>
+        </li>
+
+		
 		 
 
 

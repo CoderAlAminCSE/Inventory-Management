@@ -14,6 +14,7 @@
 	<link rel="stylesheet" href="{{ asset('backend/css/vendors_css.css') }}">
 	  
 	<!-- Style-->  
+  {{--  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">  --}}
 	<link rel="stylesheet" href="{{asset('backend/css/style.css')}}">
 	<link rel="stylesheet" href="{{asset('backend/css/skin_color.css')}}">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.css">
@@ -124,6 +125,7 @@
 
 
     <script src="{{ asset('backend/js/template.js') }}"></script>
+    <script src="{{ asset('backend/js/ajax.min.js') }}"></script>
     <script src="{{ asset('backend/js/handlebar.min.js') }}"></script>
 	  <script src="{{ asset('backend/js/pages/dashboard.js') }}"></script>
     
